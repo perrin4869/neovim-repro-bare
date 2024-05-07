@@ -17,9 +17,11 @@ jobs:
       - name: debug
         run: HOME=./home nvim --headless -c "echo &rtp" +qa
       - name: debug 2
-        run: nvim --headless -c "echo &rtp" +qa
+        run: |
+          env
+          nvim --headless -c "echo &rtp" +qa
         env:
-            HOME: ./home
+          HOME: ./home
       - name: mkdir
         run: |
           mkdir -p ~/.config/nvim ~/.local/share/nvim
