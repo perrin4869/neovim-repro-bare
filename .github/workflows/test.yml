@@ -21,15 +21,3 @@ jobs:
           env
           unset XDG_CONFIG_HOME
           nvim --headless -c "echo &rtp" +qa
-        env:
-          HOME: ./home
-      - name: mkdir
-        run: |
-          mkdir -p ~/.config/nvim ~/.local/share/nvim
-          touch ~/.config/nvim/init.lua
-      - name: debug 3
-        run: HOME=./home nvim --headless -c "echo &rtp" +qa
-      - name: debug 4
-        run: nvim --headless -c "echo &rtp" +qa
-      - name: debug 5
-        run: HOME=./home nvim --headless -c "echo &rtp" +qa
