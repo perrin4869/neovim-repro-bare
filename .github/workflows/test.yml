@@ -19,6 +19,7 @@ jobs:
       - name: debug 2
         run: |
           env
+          unset XDG_CONFIG_HOME
           nvim --headless -c "echo &rtp" +qa
         env:
           HOME: ./home
