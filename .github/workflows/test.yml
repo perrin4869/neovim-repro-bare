@@ -19,6 +19,8 @@ jobs:
       - name: debug 2
         run: HOME=./home nvim --headless -c "echo &rtp" +qa
       - name: mkdir
-        run: mkdir -p ~/.config/nvim ~/.local/share/nvim
+        run: |
+          mkdir -p ~/.config/nvim ~/.local/share/nvim
+          touch ~/.config/nvim/init.lua
       - name: debug 3
         run: HOME=./home nvim --headless -c "echo &rtp" +qa
