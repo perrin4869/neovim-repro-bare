@@ -13,6 +13,8 @@ jobs:
         with:
           # apt neovim is too old
           neovim: true
-          version: nightly # using vim.fs.joinpath
+          # version: nightly # using vim.fs.joinpath
       - name: debug
+        run: HOME=./home nvim --headless -c "echo &rtp" +qa
+      - name: debug 2
         run: HOME=./home nvim --headless -c "echo &rtp" +qa
