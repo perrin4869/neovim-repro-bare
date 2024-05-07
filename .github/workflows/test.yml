@@ -26,3 +26,7 @@ jobs:
           touch ~/.config/nvim/init.lua
       - name: debug 3
         run: HOME=./home nvim --headless -c "echo &rtp" +qa
+      - name: debug 4
+        run: nvim --headless -c "echo &rtp" +qa
+      - name: debug 5
+        run: HOME=./home nvim --headless -c "echo &rtp" +qa
