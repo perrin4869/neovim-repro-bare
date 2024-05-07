@@ -22,9 +22,9 @@ jobs:
           unset XDG_CONFIG_HOME
           env
           nvim --headless -c "echo &rtp" +qa
-          mkdir home
+          mkdir -p home
           nvim --headless -c "echo &rtp" +qa
-          mkdir home/.config
+          mkdir -p home/.config
           nvim --headless -c "echo &rtp" +qa
-          mkdir home/.config/nvim
+          mkdir -p home/.config/nvim
           nvim --headless -c "echo &rtp" +qa
